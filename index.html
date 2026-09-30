@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Discovery Workbook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-shell">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-mark">BD</div>
+                <div>
+                    <h1>Business Discovery</h1>
+                    <p>AI Readiness Workbook</p>
+                </div>
+            </div>
+
+            <div class="principle">
+                Understand the business first.<br>
+                Recommend AI second.
+            </div>
+
+            <nav id="navigation">
+
+                <button class="nav-item active" data-section="overview">
+                    <span>01</span> Discovery Overview
+                </button>
+
+                <button class="nav-item" data-section="profile">
+                    <span>02</span> Business Profile
+                </button>
+
+                <button class="nav-item" data-section="products">
+                    <span>03</span> Products & Customers
+                </button>
+
+                <button class="nav-item" data-section="journey">
+                    <span>04</span> Customer Journey
+                </button>
+
+                <button class="nav-item" data-section="processes">
+                    <span>05</span> Process Inventory
+                </button>
+
+                <button class="nav-item" data-section="workflow">
+                    <span>06</span> Workflow Mapping
+                </button>
+
+                <button class="nav-item" data-section="systems">
+                    <span>07</span> Systems & Software
+                </button>
+
+                <button class="nav-item" data-section="people">
+                    <span>08</span> People & Responsibilities
+                </button>
+
+                <button class="nav-item" data-section="data">
+                    <span>09</span> Data & Documents
+                </button>
+
+                <button class="nav-item" data-section="communication">
+                    <span>10</span> Communication Channels
+                </button>
+
+                <button class="nav-item" data-section="bottlenecks">
+                    <span>11</span> Bottlenecks
+                </button>
+
+                <button class="nav-item" data-section="ai">
+                    <span>12</span> AI Opportunity Scoring
+                </button>
+
+                <button class="nav-item" data-section="questions">
+                    <span>13</span> Discovery Questions
+                </button>
+
+                <button class="nav-item" data-section="roadmap">
+                    <span>14</span> Executive Roadmap
+                </button>
+
+            </nav>
+        </aside>
+
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">BUSINESS DISCOVERY WORKBOOK</p>
+                    <h2 id="pageTitle">Discovery Overview</h2>
+                </div>
+
+                <div class="top-actions">
+                    <span class="status">● Discovery in progress</span>
+                    <button class="secondary-btn" onclick="saveWorkbook()">Save</button>
+                    <button class="primary-btn" onclick="window.print()">Export / Print</button>
+                </div>
+            </header>
+
+
+            <div class="content">
+
+                <!-- OVERVIEW -->
+                <section id="overview" class="section active">
+
+                    <div class="hero-card">
+                        <div>
+                            <p class="eyebrow">DISCOVER BEFORE AUTOMATING</p>
+                            <h2>See the whole business before recommending AI.</h2>
+                            <p>
+                                This workbook captures how a business operates across customers,
+                                processes, people, systems, data and communication before AI
+                                opportunities are evaluated.
+                            </p>
+                        </div>
+
+                        <div class="score-circle">
+                            <strong id="completionScore">0%</strong>
+                            <span>Discovery<br>Complete</span>
+                        </div>
+                    </div>
+
+                    <div class="cards-grid">
+
+                        <div class="metric-card">
+                            <span>Processes</span>
+                            <strong id="processCount">0</strong>
+                            <small>documented</small>
+                        </div>
+
+                        <div class="metric-card">
+                            <span>Bottlenecks</span>
+                            <strong id="bottleneckCount">0</strong>
+                            <small>identified</small>
+                        </div>
+
+                        <div class="metric-card">
+                            <span>AI Opportunities</span>
+                            <strong id="opportunityCount">0</strong>
+                            <small>evaluated</small>
+                        </div>
+
+                        <div class="metric-card">
+                            <span>Priority Actions</span>
+                            <strong id="priorityCount">0</strong>
+                            <small>recommended</small>
+                        </div>
+
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Discovery Method</h3>
+
+                        <div class="method-flow">
+                            <div><b>1</b><span>Understand</span></div>
+                            <div class="arrow">→</div>
+                            <div><b>2</b><span>Map</span></div>
+                            <div class="arrow">→</div>
+                            <div><b>3</b><span>Diagnose</span></div>
+                            <div class="arrow">→</div>
+                            <div><b>4</b><span>Score</span></div>
+                            <div class="arrow">→</div>
+                            <div><b>5</b><span>Recommend</span></div>
+                        </div>
+                    </div>
+
+                </section>
+
+
+                <!-- BUSINESS PROFILE -->
+                <section id="profile" class="section">
+
+                    <div class="section-heading">
+                        <h3>Business Profile</h3>
+                        <p>Establish the operating context before examining technology.</p>
+                    </div>
+
+                    <div class="form-grid">
+
+                        <label>
+                            Business Name
+                            <input data-save type="text" placeholder="Company name">
+                        </label>
+
+                        <label>
+                            Industry
+                            <input data-save type="text" placeholder="Industry / sector">
+                        </label>
+
+                        <label>
+                            Years in Business
+                            <input data-save type="text" placeholder="e.g. 8 years">
+                        </label>
+
+                        <label>
+                            Team Size
+                            <input data-save type="number" placeholder="Number of people">
+                        </label>
+
+                        <label>
+                            Locations / Markets
+                            <input data-save type="text" placeholder="Regions served">
+                        </label>
+
+                        <label>
+                            Business Model
+                            <select data-save>
+                                <option value="">Select</option>
+                                <option>B2B</option>
+                                <option>B2C</option>
+                                <option>B2B & B2C</option>
+                                <option>Subscription</option>
+                                <option>Marketplace</option>
+                                <option>Other</option>
+                            </select>
+                        </label>
+
+                    </div>
+
+                    <label class="full-field">
+                        Primary Business Goals
+                        <textarea data-save
+                            placeholder="What is the business trying to achieve in the next 6–12 months?"></textarea>
+                    </label>
+
+                    <label class="full-field">
+                        Current Challenges
+                        <textarea data-save placeholder="What problems are preventing those goals?"></textarea>
+                    </label>
+
+                </section>
+
+
+                <!-- PRODUCTS -->
+                <section id="products" class="section">
+                    <div class="section-heading">
+                        <h3>Products & Customers</h3>
+                        <p>Understand what creates value, who buys it and why.</p>
+                    </div>
+
+                    <div class="two-column">
+                        <label>
+                            Products / Services
+                            <textarea data-save
+                                placeholder="List the main products, services, packages or revenue streams."></textarea>
+                        </label>
+
+                        <label>
+                            Ideal Customers
+                            <textarea data-save
+                                placeholder="Describe customer segments, needs and characteristics."></textarea>
+                        </label>
+
+                        <label>
+                            How Customers Find the Business
+                            <textarea data-save
+                                placeholder="Search, referrals, social media, ads, outbound, partners..."></textarea>
+                        </label>
+
+                        <label>
+                            Why Customers Buy
+                            <textarea data-save
+                                placeholder="Main problems solved, outcomes and buying triggers."></textarea>
+                        </label>
+                    </div>
+                </section>
+
+
+                <!-- CUSTOMER JOURNEY -->
+                <section id="journey" class="section">
+                    <div class="section-heading">
+                        <h3>Customer Journey</h3>
+                        <p>Map the complete experience from first contact to retention.</p>
+                    </div>
+
+                    <div class="journey-grid">
+
+                        <div class="journey-card">
+                            <b>1</b>
+                            <h4>Awareness</h4>
+                            <textarea data-save placeholder="How do prospects discover the business?"></textarea>
+                        </div>
+
+                        <div class="journey-card">
+                            <b>2</b>
+                            <h4>Inquiry</h4>
+                            <textarea data-save placeholder="How are inquiries captured and handled?"></textarea>
+                        </div>
+
+                        <div class="journey-card">
+                            <b>3</b>
+                            <h4>Conversion</h4>
+                            <textarea data-save placeholder="How does a prospect become a customer?"></textarea>
+                        </div>
+
+                        <div class="journey-card">
+                            <b>4</b>
+                            <h4>Delivery</h4>
+                            <textarea data-save placeholder="How is the product or service delivered?"></textarea>
+                        </div>
+
+                        <div class="journey-card">
+                            <b>5</b>
+                            <h4>Support</h4>
+                            <textarea data-save placeholder="How are issues and questions handled?"></textarea>
+                        </div>
+
+                        <div class="journey-card">
+                            <b>6</b>
+                            <h4>Retention</h4>
+                            <textarea data-save
+                                placeholder="How does the business retain or upsell customers?"></textarea>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <!-- PROCESS INVENTORY -->
+                <section id="processes" class="section">
+
+                    <div class="section-heading action-heading">
+                        <div>
+                            <h3>Complete Process Inventory</h3>
+                            <p>Capture recurring work across the organization.</p>
+                        </div>
+
+                        <button class="primary-btn" onclick="addProcess()">+ Add Process</button>
+                    </div>
+
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Process</th>
+                                    <th>Department</th>
+                                    <th>Owner</th>
+                                    <th>Frequency</th>
+                                    <th>Time / Effort</th>
+                                    <th>Tools</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="processTable"></tbody>
+                        </table>
+                    </div>
+
+                </section>
+
+
+                <!-- WORKFLOW -->
+                <section id="workflow" class="section">
+                    <div class="section-heading">
+                        <h3>Detailed Workflow Mapping</h3>
+                        <p>Document exactly how important work moves from trigger to outcome.</p>
+                    </div>
+
+                    <div class="workflow-builder">
+
+                        <label>
+                            Workflow Name
+                            <input data-save type="text" placeholder="e.g. New customer onboarding">
+                        </label>
+
+                        <label>
+                            Trigger
+                            <textarea data-save placeholder="What starts this workflow?"></textarea>
+                        </label>
+
+                        <label>
+                            Step-by-Step Activities
+                            <textarea data-save
+                                placeholder="1. Inquiry received&#10;2. Team reviews request&#10;3. Customer contacted..."></textarea>
+                        </label>
+
+                        <label>
+                            Decisions / Approvals
+                            <textarea data-save placeholder="Where is human judgment or approval required?"></textarea>
+                        </label>
+
+                        <label>
+                            Output / Completion
+                            <textarea data-save placeholder="What indicates the workflow is complete?"></textarea>
+                        </label>
+
+                    </div>
+                </section>
+
+
+                <!-- SYSTEMS -->
+                <section id="systems" class="section">
+                    <div class="section-heading">
+                        <h3>Systems & Software</h3>
+                        <p>Identify the current technology environment before adding another tool.</p>
+                    </div>
+
+                    <div class="two-column">
+                        <label>CRM / Sales Tools<textarea data-save
+                                placeholder="CRM, pipelines, lead tools..."></textarea></label>
+                        <label>Operations Tools<textarea data-save
+                                placeholder="Project management, ERP, scheduling..."></textarea></label>
+                        <label>Finance Tools<textarea data-save
+                                placeholder="Accounting, invoicing, payments..."></textarea></label>
+                        <label>Marketing Tools<textarea data-save
+                                placeholder="Email, social media, advertising..."></textarea></label>
+                        <label>Customer Support<textarea data-save
+                                placeholder="Helpdesk, chat, phone systems..."></textarea></label>
+                        <label>Integrations / Automation<textarea data-save
+                                placeholder="Zapier, Make, APIs, custom integrations..."></textarea></label>
+                    </div>
+                </section>
+
+
+                <!-- PEOPLE -->
+                <section id="people" class="section">
+                    <div class="section-heading">
+                        <h3>People & Responsibilities</h3>
+                        <p>AI recommendations must respect ownership, expertise and accountability.</p>
+                    </div>
+
+                    <div class="two-column">
+                        <label>Key Roles<textarea data-save
+                                placeholder="Role → primary responsibilities"></textarea></label>
+                        <label>Decision Makers<textarea data-save
+                                placeholder="Who approves operational and technology changes?"></textarea></label>
+                        <label>Manual / Repetitive Responsibilities<textarea data-save
+                                placeholder="Where is staff time heavily consumed?"></textarea></label>
+                        <label>Human Judgment Required<textarea data-save
+                                placeholder="Which activities should remain human-led?"></textarea></label>
+                    </div>
+                </section>
+
+
+                <!-- DATA -->
+                <section id="data" class="section">
+                    <div class="section-heading">
+                        <h3>Data & Documents</h3>
+                        <p>Evaluate whether the information required for automation is available and usable.</p>
+                    </div>
+
+                    <div class="two-column">
+                        <label>Key Business Data<textarea data-save
+                                placeholder="Customers, transactions, inventory, projects..."></textarea></label>
+                        <label>Important Documents<textarea data-save
+                                placeholder="SOPs, contracts, proposals, manuals, FAQs..."></textarea></label>
+                        <label>Storage Locations<textarea data-save
+                                placeholder="Drive, CRM, local files, databases..."></textarea></label>
+                        <label>Data Quality Issues<textarea data-save
+                                placeholder="Missing, duplicated, outdated or inconsistent information..."></textarea></label>
+                    </div>
+                </section>
+
+
+                <!-- COMMUNICATION -->
+                <section id="communication" class="section">
+                    <div class="section-heading">
+                        <h3>Communication Channels</h3>
+                        <p>Understand where conversations enter and how they are managed.</p>
+                    </div>
+
+                    <div class="two-column">
+                        <label>Customer Channels<textarea data-save
+                                placeholder="Email, phone, website, WhatsApp, Messenger, social media..."></textarea></label>
+                        <label>Internal Channels<textarea data-save
+                                placeholder="Slack, Teams, email, meetings, chat..."></textarea></label>
+                        <label>Response Ownership<textarea data-save
+                                placeholder="Who responds to each channel?"></textarea></label>
+                        <label>Communication Problems<textarea data-save
+                                placeholder="Missed messages, slow response, duplicate replies..."></textarea></label>
+                    </div>
+                </section>
+
+
+                <!-- BOTTLENECKS -->
+                <section id="bottlenecks" class="section">
+
+                    <div class="section-heading action-heading">
+                        <div>
+                            <h3>Bottleneck Register</h3>
+                            <p>Identify operational problems before proposing solutions.</p>
+                        </div>
+
+                        <button class="primary-btn" onclick="addBottleneck()">+ Add Bottleneck</button>
+                    </div>
+
+                    <div id="bottleneckList"></div>
+
+                </section>
+
+
+                <!-- AI SCORING -->
+                <section id="ai" class="section">
+
+                    <div class="section-heading action-heading">
+                        <div>
+                            <h3>AI Opportunity Scoring</h3>
+                            <p>AI is considered only after the operating environment is understood.</p>
+                        </div>
+
+                        <button class="primary-btn" onclick="addOpportunity()">+ Add Opportunity</button>
+                    </div>
+
+                    <div class="score-explanation">
+                        Score each factor from <b>1 (low)</b> to <b>5 (high)</b>.
+                        Priority considers impact, repetition, time saving, data readiness,
+                        implementation effort and human-risk requirements.
+                    </div>
+
+                    <div id="opportunityList"></div>
+
+                </section>
+
+
+                <!-- QUESTIONS -->
+                <section id="questions" class="section">
+
+                    <div class="section-heading">
+                        <h3>Discovery Interview Question Bank</h3>
+                        <p>Questions designed to uncover the real operating environment.</p>
+                    </div>
+
+                    <div class="question-groups">
+
+                        <div class="question-card">
+                            <h4>Business & Goals</h4>
+                            <p>What are the three most important outcomes the business needs this year?</p>
+                            <p>What currently prevents those outcomes?</p>
+                            <p>Where does the business make or lose the most money?</p>
+                        </div>
+
+                        <div class="question-card">
+                            <h4>Customers</h4>
+                            <p>How does a stranger become a paying customer?</p>
+                            <p>Where do customers experience delays or frustration?</p>
+                            <p>What questions does your team answer repeatedly?</p>
+                        </div>
+
+                        <div class="question-card">
+                            <h4>Processes</h4>
+                            <p>Which tasks happen every day or every week?</p>
+                            <p>Which activities involve copying information between systems?</p>
+                            <p>Where does work usually wait for someone?</p>
+                        </div>
+
+                        <div class="question-card">
+                            <h4>People</h4>
+                            <p>What work consumes skilled employees' time unnecessarily?</p>
+                            <p>Where is human judgment essential?</p>
+                            <p>Who must approve changes to existing workflows?</p>
+                        </div>
+
+                        <div class="question-card">
+                            <h4>Technology & Data</h4>
+                            <p>Which systems are business-critical today?</p>
+                            <p>Where is important information stored?</p>
+                            <p>Which systems do not communicate with each other?</p>
+                        </div>
+
+                        <div class="question-card">
+                            <h4>AI Readiness</h4>
+                            <p>What would you automate if accuracy and control were guaranteed?</p>
+                            <p>What should AI never be allowed to decide independently?</p>
+                            <p>What result would make an AI implementation worthwhile?</p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- ROADMAP -->
+                <section id="roadmap" class="section">
+
+                    <div class="section-heading">
+                        <h3>Executive Summary & Implementation Roadmap</h3>
+                        <p>Convert discovery findings into controlled, business-led action.</p>
+                    </div>
+
+                    <label class="full-field">
+                        Executive Summary
+                        <textarea data-save
+                            placeholder="Summarize the business, major findings, operational risks and readiness."></textarea>
+                    </label>
+
+                    <label class="full-field">
+                        Highest-Priority Problems
+                        <textarea data-save
+                            placeholder="Which problems should be solved first — with or without AI?"></textarea>
+                    </label>
+
+                    <div class="roadmap-grid">
+
+                        <div class="roadmap-card">
+                            <span>PHASE 1</span>
+                            <h4>Foundation</h4>
+                            <textarea data-save
+                                placeholder="Clean data, document processes, fix system gaps..."></textarea>
+                        </div>
+
+                        <div class="roadmap-card">
+                            <span>PHASE 2</span>
+                            <h4>Pilot</h4>
+                            <textarea data-save placeholder="Low-risk, high-value AI or automation pilot..."></textarea>
+                        </div>
+
+                        <div class="roadmap-card">
+                            <span>PHASE 3</span>
+                            <h4>Integrate</h4>
+                            <textarea data-save placeholder="Connect validated solutions into workflows..."></textarea>
+                        </div>
+
+                        <div class="roadmap-card">
+                            <span>PHASE 4</span>
+                            <h4>Measure & Scale</h4>
+                            <textarea data-save
+                                placeholder="Measure outcomes, improve controls and expand..."></textarea>
+                        </div>
+
+                    </div>
+
+                    <label class="full-field">
+                        Human Oversight & Guardrails
+                        <textarea data-save
+                            placeholder="Define approvals, access controls, escalation points and activities that must remain human-led."></textarea>
+                    </label>
+
+                    <label class="full-field">
+                        Success Measures
+                        <textarea data-save
+                            placeholder="Time saved, response time, error reduction, conversion, cost reduction, customer satisfaction..."></textarea>
+                    </label>
+
+                </section>
+
+            </div>
+        </main>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
